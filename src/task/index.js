@@ -21,6 +21,7 @@ export default function Index() {
       });
   }, []);
 
+  //for showing data
   const getUserData = () => {
     if (data.length) {
       return data.map((user) => {
@@ -47,8 +48,8 @@ export default function Index() {
     }
   };
 
+  //for search users
   const searchUsers = (event) => {
-    console.log(event.target.value)
     if (event.target.value !=="" && searchData.length) {
       const result = searchData.filter(function (user) {
         let userData = Object.values(user.address);
@@ -67,6 +68,7 @@ export default function Index() {
       updateData(data);
     }
   };
+  
   return (
     <div>
       <h2>Users Information</h2>
